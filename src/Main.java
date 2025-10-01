@@ -7,17 +7,17 @@ public class Main {
         ZooManagement zm = new ZooManagement();
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("zooName : ");
+       /* System.out.print("zooName : ");
         zm.zooName = sc.nextLine();
 
         System.out.print("nbrCages : ");
         zm.nbCages = sc.nextInt();
 
         System.out.println("zooName : "+zm.zooName);
-        System.out.println("nbrCages : "+zm.nbCages);
+        System.out.println("nbrCages : "+zm.nbCages); */
 
         System.out.println(zm);
-
+        Zoo zoo = new Zoo();
         ZooManagement zm2 = new ZooManagement("my Zoo",80);
         System.out.println(zm2);
 
@@ -43,6 +43,17 @@ public class Main {
         Zoo zoo2 = new Zoo("frigya","sousse",100);
         System.out.println(zoo2);
         zoo2.displayZoo();
+        System.out.println(zoo2.addAnimal(chat));
+        zoo2.affiche();
+        System.out.println(zoo2.searchAnimal(chat));
+        System.out.println(zoo2.addAnimal(lion));
+        System.out.println(zoo2.addAnimal(new Animal("Chat","katis",23,true)));
+        zoo2.affiche();
+
+        System.out.println(zoo2.removeAnimal(chat));
+
+        System.out.println(zoo2.isZooFull());
+        System.out.println(Zoo.comparerZoo(zoo2,zoo));
 
 
 
